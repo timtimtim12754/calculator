@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
     <title>計算機</title>
 </head>
 <body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display_screen">
+                <p id="display-text">0</p>
+            </div>
+            <div class="button-area">
+                <div class="row-button">
+                    <button class="calculator-button control-button" id="clean-button">C</button>
+                    <button class="calculator-button control-button" id="backspace-button">➡</button>
+                    <button class="calculator-button control-button" id="percent-button">%</button>
+                    <button class="calculator-button control-button" id="divide-button">÷</button>
+                </div>
+                <div class="row-button">
+                    <button class="calculator-button number-button">7</button>
+                    <button class="calculator-button number-button">8</button>
+                    <button class="calculator-button number-button">9</button>
+                    <button class="calculator-button control-button" id="multiply-button">×</button>
+                </div>
+                <div class="row-button">
+                    <button class="calculator-button number-button">4</button>
+                    <button class="calculator-button number-button">5</button>
+                    <button class="calculator-button number-button">6</button>
+                    <button class="calculator-button control-button" id="subtract-button">-</button>
+                </div>
+                <div class="row-button">
+                    <button class="calculator-button number-button">1</button>
+                    <button class="calculator-button number-button">2</button>
+                    <button class="calculator-button number-button">3</button>
+                    <button class="calculator-button control-button" id="add-button">+</button>
+                </div>
+                <div class="row-button">
+                    <button class="calculator-button number-button">0</button>
+                    <button class="calculator-button number-button">.</button>
+                    <button class="calculator-button control-button" id="equal-button">=</button>
+                    <button class="calculator-button empty-button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
