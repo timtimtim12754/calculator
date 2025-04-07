@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 236, 219);
+}
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* 計算機 */
+.calculator{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* 顯示區 */
+.display_screen{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    text-align: right;
+    background-color: rgb(252, 180, 84);
+}
+#display-text{
+    font-size: 32px;
+    padding-right: 20px;
+}
+/* 按鈕區 */
+.button-area{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 237, 140);
+    flex-grow: 1;
+    padding: 10px;
+}
+.row-button{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.calculator-button{
+	background: none;
+    border: none;
+    padding: 0;
+    font-size: 32px;
+    flex-grow: 1;
+    border: 1px solid black;
+    margin: 6px;
+    width: 40px;
+}
+
+/* 按鈕 */
+/*空的按鈕（佔位）*/
+.empty-button{
+    border: none;
+}
+/* 清除按鈕 */
+#clean-button{
+    background-color: rgb(173, 255, 47);
+}
+#clean-button:hover{
+    background-color: rgb(213, 255, 97);
+}
+/*控制按鈕*/
+.control-button{
+    background-color: rgb(255, 137, 137);
+}
+.control-button:hover{
+    background-color: rgb(255, 162, 162);
+}
+/*數字按鈕*/
+.number-button{
+    background-color: rgb(96, 181, 255);
+}
+.number-button:hover{
+    background-color: rgb(121, 206, 255);
+}
