@@ -25,10 +25,12 @@ body{
     border-bottom: 2px solid black;
     text-align: right;
     background-color: rgb(252, 180, 84);
+    overflow: auto;
 }
 #display-text{
     font-size: 32px;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 /* 按鈕區 */
 .button-area{
