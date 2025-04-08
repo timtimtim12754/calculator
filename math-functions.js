@@ -43,6 +43,9 @@ function get_operate_method(s) {
     operate_method: operate_method,
   };
 }
+function percent(n){
+  return n/100
+}
 function operate(n1, n2, operate_method) {
   switch (operate_method) {
     case "+":
