@@ -19,7 +19,8 @@ function addMathSymbol(s){
   let mathSymbolList=['+','-','×','÷']
   //檢查條件
   let canAdd=true
-  display_text.textContent.split("").forEach((element,index)=>{
+  const text=display_text.textContent
+  text.split("").forEach((element,index)=>{
     if(display_text.textContent.charAt(0)=='-' && index==0){
       return
     }
@@ -27,6 +28,11 @@ function addMathSymbol(s){
       canAdd=false
     }
   })
+  //如果當前是符號可以覆蓋
+  if(mathSymbolList.includes(text.charAt(text.length-1))){
+    changeDisplay(text.slice(0,text.length-1)+s)
+    return
+  }
   if (!canAdd){
     return
   }
