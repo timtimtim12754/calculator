@@ -52,6 +52,10 @@ function get_operate_method(s) {
   };
 }
 function percent(n){
+  if(isNaN(n)){
+    showError()
+    return
+  }
   return n/100
 }
 function operate(n1, n2, operate_method) {

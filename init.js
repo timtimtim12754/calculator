@@ -21,7 +21,7 @@ document.querySelector("#backspace-button").addEventListener("click",()=>{
 //運算按鈕
 //百分比
 document.querySelector("#percent-button").addEventListener("click",()=>{
-    display_text.textContent=percent(Number(display_text.textContent))
+    changeDisplay(percent(Number(display_text.textContent)))
 })
 //運算符號
 mathButtonList=[document.querySelector("#add-button"),

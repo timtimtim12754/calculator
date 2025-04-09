@@ -3,6 +3,10 @@ function changeDisplay(s) {
   if (s == undefined) {
     return;
   }
+  if(display_text.textContent=="錯誤"){
+    display_text.textContent=0
+    return
+  }
   display_text.textContent = s;
 }
 function addNumber(n) {
@@ -38,6 +42,9 @@ function addMathSymbol(s){
   }
   changeDisplay(display_text.textContent+s) 
 }
+function showError(){
+  changeDisplay("錯誤")
+}
 function showAnswer(){
   s=display_text.textContent
   let mathObject=get_operate_method(s)
@@ -45,5 +52,8 @@ function showAnswer(){
     return
   }
   let anwser=operate(mathObject.n1,mathObject.n2,mathObject.operate_method)
+  if(anwser==undefined){
+    showError()
+  }
   changeDisplay(anwser)
 }
