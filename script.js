@@ -38,6 +38,8 @@ function addMathSymbol(s){
     return
   }
   if (!canAdd){
+    showAnswer()
+    addMathSymbol(s)
     return
   }
   changeDisplay(display_text.textContent+s) 
