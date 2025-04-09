@@ -32,3 +32,12 @@ function addMathSymbol(s){
   }
   changeDisplay(display_text.textContent+s) 
 }
+function showAnswer(){
+  s=display_text.textContent
+  let mathObject=get_operate_method(s)
+  if(mathObject===undefined){
+    return
+  }
+  let anwser=operate(mathObject.n1,mathObject.n2,mathObject.operate_method)
+  changeDisplay(anwser)
+}
