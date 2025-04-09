@@ -39,6 +39,10 @@ function get_operate_method(s) {
     }
   });
   n2 = tmp_list;
+  if (n1===undefined || n1.length==0|| n2===undefined || n2.length==0 || operate_method===undefined)
+  {
+    return undefined
+  }
   n1 = n1.join("");
   n2 = n2.join("");
   return {
