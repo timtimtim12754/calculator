@@ -22,13 +22,17 @@ function get_operate_method(s) {
   let n2;
   let operate_method;
   //提取數字
-  let allNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "."]; //所有的數字可能以及符號
+  let allNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]; //所有的數字可能以及符號
   let string_lists = s.split("");
   let tmp_list = [];
-  string_lists.forEach((element) => {
+  string_lists.forEach((element,index) => {
     if (allNumbers.includes(element)) {
       tmp_list.push(element);
     } else {
+      if(index==0){
+        tmp_list.push(element);
+        return;
+      }
       n1 = tmp_list.slice();
       tmp_list = [];
       operate_method = element;
