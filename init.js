@@ -39,3 +39,33 @@ mathButtonList.forEach(element=>{
 document.querySelector("#equal-button").addEventListener("click",()=>{
   showAnswer()
 })
+//鍵盤支援
+document.addEventListener("keydown",(event)=>{
+  let key=event.key
+  let allNumbersList=["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
+  console.log(`key:${key}`)
+  if(allNumbersList.includes(key)){
+    document.querySelector(`#number-${key}`).click()
+  }
+  if(key=="Backspace"){
+    document.querySelector(`#backspace-button`).click()
+  }
+  if(key=="+"){
+    document.querySelector("#add-button").click()
+  }
+  if(key=="-"){
+    document.querySelector("#subtract-button").click()
+  }
+  if(key=="*"){
+    document.querySelector("#multiply-button").click()
+  }
+  if(key=="/"){
+    document.querySelector("#divide-button").click()
+  }
+  if(key=="="){
+    document.querySelector("#equal-button").click()
+  }
+  if(key=="Enter"){
+    document.querySelector("#equal-button").click()
+  }
+})
