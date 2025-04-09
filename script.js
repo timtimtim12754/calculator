@@ -6,7 +6,10 @@ function changeDisplay(s) {
   display_text.textContent = s;
 }
 function addNumber(n) {
-  if (display_text.textContent.charAt(0)=="0"){
+  if(n=="00" && display_text.textContent.charAt(0)=="0"){
+    return
+  }
+  if (display_text.textContent.charAt(0)=="0" && display_text.textContent.length<=1){
     changeDisplay(n)
   }else{
     changeDisplay(display_text.textContent+n)
