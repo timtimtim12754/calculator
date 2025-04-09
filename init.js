@@ -35,3 +35,7 @@ mathButtonList.forEach(element=>{
     addMathSymbol(element.textContent)
   })
 })
+//等號
+document.querySelector("#equal-button").addEventListener("click",()=>{
+  showAnswer()
+})
