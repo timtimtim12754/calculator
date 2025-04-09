@@ -23,3 +23,15 @@ document.querySelector("#backspace-button").addEventListener("click",()=>{
 document.querySelector("#percent-button").addEventListener("click",()=>{
     display_text.textContent=percent(Number(display_text.textContent))
 })
+//運算符號
+mathButtonList=[document.querySelector("#add-button"),
+  document.querySelector("#subtract-button"),
+  document.querySelector("#multiply-button"),
+  document.querySelector("#divide-button"),
+]
+
+mathButtonList.forEach(element=>{
+  element.addEventListener("click",()=>{
+    addMathSymbol(element.textContent)
+  })
+})
