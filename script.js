@@ -15,3 +15,20 @@ function addNumber(n) {
     changeDisplay(display_text.textContent+n)
   }
 }
+function addMathSymbol(s){
+  let mathSymbolList=['+','-','×','÷']
+  //檢查條件
+  let canAdd=true
+  display_text.textContent.split("").forEach((element,index)=>{
+    if(display_text.textContent.charAt(0)=='-' && index==0){
+      return
+    }
+    if(mathSymbolList.includes(element)){
+      canAdd=false
+    }
+  })
+  if (!canAdd){
+    return
+  }
+  changeDisplay(display_text.textContent+s) 
+}
