@@ -42,8 +42,8 @@ function get_operate_method(s) {
   n1 = n1.join("");
   n2 = n2.join("");
   return {
-    n1: n1,
-    n2: n2,
+    n1: Number(n1),
+    n2: Number(n2),
     operate_method: operate_method,
   };
 }
@@ -59,7 +59,7 @@ function operate(n1, n2, operate_method) {
     case "×":
       return multiplay(n1, n2);
     case "÷":
-      return divide(n1, n2b);
+      return divide(n1, n2);
     default:
       return undefined;
   }
